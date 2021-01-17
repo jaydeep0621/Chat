@@ -1,0 +1,31 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaydeep0621/Chat.git"
+  },
+  "author": "Jaydeep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaydeep0621/Chat/issues"
+  },
+  "homepage": "https://github.com/jaydeep0621/Chat#readme",
+  "dependencies": {
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "cros": "^1.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.3.1",
+    "i18n": "^0.13.2",
+    "nodemon": "^2.0.7",
+    "socket.io": "^3.1.0"
+  }
+}
