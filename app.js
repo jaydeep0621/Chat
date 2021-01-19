@@ -6,6 +6,8 @@ const helmet = require("helmet");
 const cors = require("cors");
 const i18n = require("i18n");
 const v1route = require("../Chat/src/route/route");
+require("./src/config/db");
+const uschema = require("./src/model/mschema");
 
 const port = process.env.PORT;
 
@@ -39,8 +41,10 @@ const io = require("socket.io")(server);
 io.on('connection', (socket) => {
     console.log("User Connected");
 
-    socket.on('text', (msg) => {
+    socket.on('test', (msg) => {
+        uschema["message"] = msg;
         console.log("Message from the Client is : ", msg);
+
     })
 
     socket.on('disconnect', () => {
