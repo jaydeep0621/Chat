@@ -1,9 +1,9 @@
 const express = require("express");
-const router = express.Router();
 const bodyparser = require("body-parser");
 const control = require("../controller/controller");
+const router = express.Router();
 router.use(bodyparser.json());
 
-router.get("/start", control.start);
+router.get("/message", control.start);
 
 module.exports = router;
