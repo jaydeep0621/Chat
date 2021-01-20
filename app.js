@@ -8,6 +8,8 @@ const i18n = require("i18n");
 const v1route = require("../Chat/src/route/route");
 require("./src/config/db");
 const uschema = require("./src/model/mschema");
+const bcrypt = require("bcrypt");
+const Appconfig = require("./src/config/config.json");
 
 const port = process.env.PORT;
 
@@ -41,10 +43,13 @@ const io = require("socket.io")(server);
 io.on('connection', (socket) => {
     console.log("User Connected");
 
-    socket.on('test', (msg) => {
-        uschema["message"] = msg;
-        console.log("Message from the Client is : ", msg);
-
+    socket.on('test', (msg,name) => {
+        let Uschema = new uschema();
+        const message = bcrypt.hash
+        Uschema["message"] = msg;
+        Uschema["username"] = name;
+        const update = Uschema.save();
+        console.log("Message from the Client is : ",msg);
     })
 
     socket.on('disconnect', () => {

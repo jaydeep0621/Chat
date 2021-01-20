@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jaydeep0621/Chat#readme",
   "dependencies": {
     "async": "^3.2.0",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "cros": "^1.0.0",
     "dotenv": "^8.2.0",
@@ -28,6 +29,7 @@
     "mongo": "^0.1.0",
     "mongoose": "^5.11.12",
     "nodemon": "^2.0.7",
+    "save": "^2.4.0",
     "socket.io": "^3.1.0"
   }
 }

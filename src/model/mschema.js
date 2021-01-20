@@ -1,15 +1,14 @@
 const mongoose = require("mongoose");
 
 const uschema = new mongoose.Schema({
-    //username:{
-    //    unique:true,
-    //    required:true,
-    //    type:String
-    //},
+    username:{
+        required:true,
+        type:String
+    },
     message:{
         required:true,
         type:String
     }  
 })
 
-module.exports =  mongoose.model("messageschema", uschema);
+module.exports =  mongoose.model("message", uschema);
