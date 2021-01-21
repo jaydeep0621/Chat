@@ -15,8 +15,9 @@ module.exports = {
             const user = req.body.name;
             const message = req.body.message;
             const msg = await module.exports.messagehash(message);
-            console.log(msg);
+            console.log(">>>Hashed Message>>>", msg);
             socket.emit('test', msg , user);
+            console.log(">>>Original Message>>>",message);
             res.send("Message Has Been Succesfully Send")
         }catch(err){
             res.send("Something Went Wrong");
